@@ -30,11 +30,10 @@ class Parser(object):
             costo_transferencias = 0.05
             total_tarjetas_credito = 1
             total_chequeras = 1
-        #Israel trae el tipo Black pero lo agrego por las dudas
-        # elif tipo == 'BLACK':
-        #     cliente = ClienteBlack
-        #     limite_extraccion_diario = 100000
-        #     limite_transferencia_recibida = inf
-        #     costo_transferencias = 0
-        #     total_tarjetas_credito = 5
-        #     total_chequeras = 2
+        elif tipo == 'BLACK':
+            cliente = Cliente.ClienteBlack
+            limite_extraccion_diario = 100000
+            limite_transferencia_recibida = inf
+            costo_transferencias = 0
+            total_tarjetas_credito = 5
+            total_chequeras = 2

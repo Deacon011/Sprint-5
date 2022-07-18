@@ -76,7 +76,24 @@ class ClienteGold(Cliente):
     def autorizacionTransferencia(self):
         return True
 
-# Israel suma la clase Cliente Black
-# Israel suma la clase Cliente Black
-# Israel suma la clase Cliente Black
-# Israel suma la clase Cliente Black
+class ClienteBlack(Cliente):
+    def __init__(self, **cliente):
+        Cliente.__init__(**cliente)
+
+    def puedeCrearChequera(self):
+        return True
+
+    def puedeTenerTarjetaDeCredito(self):
+        return True
+
+    def puedeComprarDolar(self):
+        return True
+
+    def tieneCuentaCorriente(self):
+        return True
+
+    def comisionTransferencia(self, monto: int):
+        return monto * self.cuenta.costo_transferencias
+
+    def autorizacionTransferencia(self):
+        return True
